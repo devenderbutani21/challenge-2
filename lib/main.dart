@@ -61,7 +61,44 @@ class _MyHomePageState extends State<MyHomePage> {
             height: deviceSize.height,
             width: double.infinity,
             color: Colors.pink.shade300,
-//              children: <Widget>[],
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 540,
+                ),
+                Text(
+                  'Today 9:00 PM',
+                  style: TextStyle(
+                    color: Colors.pink.shade400,
+                    fontSize: 19,
+                  ),
+                ),
+                Text(
+                  'Easy and Gentle Yoga',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                RawMaterialButton(
+                  onPressed: () {},
+                  elevation: 2.0,
+                  fillColor: Colors.pink.shade200,
+                  child: Text(
+                    'You are going!',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  padding: EdgeInsets.all(10.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+//                      side: BorderSide(color: Colors.red),
+                  ),
+                ),
+              ],
+            ),
           ),
           ClipRRect(
             borderRadius: BorderRadius.only(
@@ -92,30 +129,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       RawMaterialButton(
                         onPressed: () {},
                         elevation: 2.0,
-                        fillColor: Colors.white,
                         child: Icon(
-                          Icons.music_note,
-                          size: 15.0,
-                          color: Colors.pink.shade200,
+                          Icons.check_circle_outline,
+                          size: 40.0,
+                          color: Colors.pinkAccent,
                         ),
-                        padding: EdgeInsets.all(5.0),
+//                        padding: EdgeInsets.all(5.0),
                         shape: CircleBorder(),
                       ),
                       RawMaterialButton(
                         onPressed: () {},
                         elevation: 2.0,
-                        fillColor: Colors.white,
                         child: Icon(
-                          Icons.music_note,
-                          size: 15.0,
-                          color: Colors.pink.shade200,
+                          Icons.cancel,
+                          size: 40.0,
+                          color: Colors.pinkAccent,
                         ),
-                        padding: EdgeInsets.all(5.0),
                         shape: CircleBorder(),
                       ),
                     ],
@@ -132,7 +166,128 @@ class _MyHomePageState extends State<MyHomePage> {
               height: deviceSize.height * 1 / 2,
               width: double.infinity,
               color: Colors.pink.shade100,
-//              children: <Widget>[],
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 200,
+                  ),
+                  Text(
+                    'Today 6:00 PM',
+                    style: TextStyle(
+                      color: Colors.pink.shade300,
+                      fontSize: 19,
+                    ),
+                  ),
+                  Text(
+                    'Yoga and Meditation for Beginners',
+                    style: TextStyle(
+                      color: Colors.pinkAccent,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Stack(
+                        children: <Widget>[
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: CircleAvatar(
+                                radius: 18,
+                                child: Image.network(
+                                  'https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: CircleAvatar(
+                                radius: 18,
+                                child: Image.network(
+                                  'https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: CircleAvatar(
+                                radius: 18,
+                                child: Image.network(
+                                  'https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_1280.jpg',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+
+//                          Container(
+//                            height: 40,
+//                            width: 40,
+//                            child:ClipOval(
+//                              child: Image.network(
+//                                'https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_1280.jpg',
+//                                fit: BoxFit.contain,
+//                              ),
+//                            ),
+//                          ),
+//                          Container(
+//                            height: 40,
+//                            width: 40,
+//                            child:ClipOval(
+//                              child: Image.network(
+//                                'https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg',
+//                                fit: BoxFit.contain,
+//                              ),
+//                            ),
+//                          ),
+//                          Container(
+//                            height: 40,
+//                            width: 40,
+//                            child:ClipOval(
+//                              child: Image.network(
+//                                'https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg',
+//                                fit: BoxFit.contain,
+//                              ),
+//                            ),
+//                          ),
+//                          Container(
+//                            height: 40,
+//                            width: 40,
+//                            child:ClipOval(
+//                              child: Image.network(
+//                                'https://cdn.pixabay.com/photo/2017/01/23/19/40/woman-2003647_1280.jpg',
+//                                fit: BoxFit.contain,
+//                              ),
+//                            ),
+//                          ),
+                        ],
+                      ),
+                      SizedBox(width: 50,),
+                      Text(
+                        'Marie and 4 others',
+                        style: TextStyle(
+                          color: Colors.pinkAccent,
+                          fontSize: 18,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           ClipRRect(

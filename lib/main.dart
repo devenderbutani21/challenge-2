@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Meetup App',
       theme: ThemeData(
         primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -194,25 +195,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       Stack(
                         children: <Widget>[
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: CircleAvatar(
-                                radius: 18,
-                                child: Image.network(
-                                  'https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg',
-                                  fit: BoxFit.contain,
-                                ),
+                          CircleAvatar(
+                            radius: 18,
+                            child: ClipOval(
+                              child: Image.network(
+                                'https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg',
+                                fit: BoxFit.contain,
                               ),
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.center,
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 20,
+                            ),
                             child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: CircleAvatar(
-                                radius: 18,
+                              radius: 18,
+                              child: ClipOval(
                                 child: Image.network(
                                   'https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg',
                                   fit: BoxFit.contain,
@@ -220,12 +218,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.centerLeft,
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 40,
+                            ),
                             child: CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: CircleAvatar(
-                                radius: 18,
+                              radius: 18,
+                              child: ClipOval(
                                 child: Image.network(
                                   'https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_1280.jpg',
                                   fit: BoxFit.contain,
@@ -233,50 +232,39 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                           ),
-
-//                          Container(
-//                            height: 40,
-//                            width: 40,
-//                            child:ClipOval(
-//                              child: Image.network(
-//                                'https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_1280.jpg',
-//                                fit: BoxFit.contain,
-//                              ),
-//                            ),
-//                          ),
-//                          Container(
-//                            height: 40,
-//                            width: 40,
-//                            child:ClipOval(
-//                              child: Image.network(
-//                                'https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg',
-//                                fit: BoxFit.contain,
-//                              ),
-//                            ),
-//                          ),
-//                          Container(
-//                            height: 40,
-//                            width: 40,
-//                            child:ClipOval(
-//                              child: Image.network(
-//                                'https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg',
-//                                fit: BoxFit.contain,
-//                              ),
-//                            ),
-//                          ),
-//                          Container(
-//                            height: 40,
-//                            width: 40,
-//                            child:ClipOval(
-//                              child: Image.network(
-//                                'https://cdn.pixabay.com/photo/2017/01/23/19/40/woman-2003647_1280.jpg',
-//                                fit: BoxFit.contain,
-//                              ),
-//                            ),
-//                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 60,
+                            ),
+                            child: CircleAvatar(
+                              radius: 18,
+                              child: ClipOval(
+                                child: Image.network(
+                                  'https://cdn.pixabay.com/photo/2017/01/23/19/40/woman-2003647_1280.jpg',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                              left: 80,
+                            ),
+                            child: CircleAvatar(
+                              radius: 18,
+                              child: ClipOval(
+                                child: Image.network(
+                                  'https://cdn.pixabay.com/photo/2020/07/21/10/52/girl-5425872_1280.jpg',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
-                      SizedBox(width: 50,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Text(
                         'Marie and 4 others',
                         style: TextStyle(
